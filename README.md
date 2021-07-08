@@ -21,12 +21,18 @@ It should be noted that the whole index is permanently loaded in memory in order
 
 
 ### 3. Run the server
-   The bash script [run_spideriment_search_server.sh](src/run_spideriment_search_server.sh) prepares the runtime environment and then runs the program:
+   The bash script [run_spideriment_search_server.sh](src/run_spideriment_search_server.sh) prepares the environment and then runs the program:
    ```
    ./run_spideriment_search_server.sh
    ```
 
    You can also install a [systemd service](src/spideriment_search_server.service) to be able to run the server automatically on startup (on Linux distributions that use systemd).
+
+
+
+## Related projects
+* **[Spideriment](https://github.com/vitlabuda/spideriment)** – web crawler (spider, indexer)
+* **[Spideriment Web Search](https://github.com/vitlabuda/spideriment_web_search)** – web frontend (search engine)
 
 
 
