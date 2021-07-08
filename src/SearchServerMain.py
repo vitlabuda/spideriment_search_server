@@ -32,7 +32,7 @@ from ClientHandlerThread import ClientHandlerThread
 
 
 class SearchServerMain:
-    PROGRAM_VERSION: float = 1.0
+    PROGRAM_VERSION: float = 1.1
 
     _LISTEN_BACKLOG: int = 64
 
