@@ -1,42 +1,18 @@
-# Spideriment Search Server
-**Spideriment Search Server** is a proof-of-concept search server for the [Spideriment](https://github.com/vitlabuda/spideriment) web crawler.
-It listens on a [MsgESS-wrapped](https://github.com/vitlabuda/msgess-python) Unix socket, accepting search queries from local clients and returning ranked search results.
+# THIS PROJECT IS NO LONGER MAINTAINED
 
-The server performs the searches in a [Spideriment](https://github.com/vitlabuda/spideriment) web index CSV file.
-It should be noted that the whole index is permanently loaded in memory in order to speed up searches, so the server can be very RAM-intensive.
+Due to its limited flexibility and certain poor design decisions, the original
+_Spideriment_ project has been abandoned and is no longer maintained. This
+applies to all the components of this project:
+[Spideriment](https://github.com/vitlabuda/spideriment),
+[Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server)
+and [Spideriment Web Search](https://github.com/vitlabuda/spideriment_web_search).
 
+**However, the project has been rewritten from scratch as a whole, with many
+improvements in terms of the components' software design and architecture,
+features, configuration options, flexibility, extensibility and scalability:**
+- **[Spideriment-NG](https://github.com/vitlabuda/spideriment-ng)**
+- **[Spideriment-NG Search](https://github.com/vitlabuda/spideriment-ng-search)**
+- **[Spideriment-NG Docker](https://github.com/vitlabuda/spideriment-ng-docker)**
 
-
-## Usage
-
-### 1. Requirements
-   * **Linux**
-   * **Python 3.7+**
-   
-   The program was tested in Python 3.7 (Debian 10) and Python 3.8 (Ubuntu 20.04).
-
-
-### 2. Change the configuration to fit your needs
-   The server's configuration can be changed in the **[Settings.py](src/Settings.py)** file.
-
-
-### 3. Run the server
-   The bash script [run_spideriment_search_server.sh](src/run_spideriment_search_server.sh) prepares the environment and then runs the program:
-   ```
-   ./run_spideriment_search_server.sh
-   ```
-
-   You can also install a [systemd service](src/spideriment_search_server.service) to be able to run the server automatically on startup (on Linux distributions that use systemd).
-
-
-
-## Related projects
-* **[Spideriment](https://github.com/vitlabuda/spideriment)** – web crawler (spider, indexer)
-* **[Spideriment Web Search](https://github.com/vitlabuda/spideriment_web_search)** – web frontend (search engine)
-
-
-
-## Licensing
-This project is licensed under the 3-clause BSD license. See the [LICENSE](LICENSE) file for details.
-
-Written by [Vít Labuda](https://vitlabuda.cz/).
+This repository's original _README_ file has been renamed to
+[README-old.md](README-old.md).
